@@ -1,0 +1,111 @@
+////////////////
+///CALENDAR SASS FILE
+////////////////
+@import "../global.scss";
+
+#calendar-nav {
+	border-bottom: 4px solid $underlineColour;
+}
+
+
+#main-content {
+
+	#race-calendar {
+
+		h2 {
+			font-family: Arial, sans-serif;
+			font-size: 18px;
+			@include section-header($black);
+			@include center;
+			width: 950px;
+			margin-bottom: 0;
+			margin-top: 62px;
+		}
+
+		p {
+			@include copy($black);
+			@include center;
+			width: 950px;
+			margin-bottom: 37px;
+		}
+
+		#schedule-header {
+
+			background-color: #f0f0f0;
+			height: 41px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+
+			div {
+				@include center;
+				width: 890px;
+				padding-top: 13px;
+				padding-left: 3.1578947368%;
+				padding-right: 3.1578947368%;
+				overflow: hidden;
+
+				span {
+					display: block;
+
+					&:first-child {
+						width:28%;
+						float: left;
+					}
+				}
+
+				#date {
+					width: 20%;
+					float: left;
+				}
+
+				#location {
+					float: left;
+				}
+
+				#race-weekend {
+					text-align: right;
+					float: right;
+				}
+			}
+		}
+
+		.schedule-list {
+
+			@include copy;
+			@include center;
+			margin-top: 0;
+			margin-bottom: 67px;
+			padding: 0;
+			width: 950px;
+
+			li {
+
+				border-top:1px solid #4e4f50;
+				overflow:hidden;
+				padding: 20px 3.1578947368%;
+
+				.schedule-title {
+					float:left;
+					width:28%;
+				}
+
+				.schedule-date {
+					float:left;
+					width: 20%;
+				}
+
+				.schedule-location {
+					float:left;
+				}
+
+				.schedule-weekend{
+					float:right;	
+				}
+
+				&:first-child {
+					border-top: 0;
+				}
+			}
+		}
+	}
+}

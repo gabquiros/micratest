@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'NissanProBoldExtIta';
+    src: url('fonts/nissanproextraboldita-webfont.eot');
+    src: url('fonts/nissanproextraboldita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nissanproextraboldita-webfont.woff') format('woff'),
+         url('fonts/nissanproextraboldita-webfont.ttf') format('truetype'),
+         url('fonts/nissanproextraboldita-webfont.svg#NissanAGBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'NissanProBoldExtCon';
+    src: url('fonts/nissanproextrabold-webfont.eot');
+    src: url('fonts/nissanproextrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nissanproextrabold-webfont.woff') format('woff'),
+         url('fonts/nissanproextrabold-webfont.ttf') format('truetype'),
+         url('fonts/nissanproextrabold-webfont.svg#NissanAGBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'NissanProBoldCon';
+    src: url('fonts/NissanPro-BoldCn.eot');
+    src: url('fonts/NissanPro-BoldCn.eot?#iefix') format('embedded-opentype'),
+         url('fonts/NissanPro-BoldCn.woff') format('woff'),
+         url('fonts/NissanPro-BoldCn.ttf') format('truetype'),
+         url('fonts/NissanPro-BoldCn.svg#NissanAGBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'NissanAGRegular';
+    src: url('fonts/nissanag-regular-webfont.eot');
+    src: url('fonts/nissanag-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nissanag-regular-webfont.woff') format('woff'),
+         url('fonts/nissanag-regular-webfont.ttf') format('truetype'),
+         url('fonts/nissanag-regular-webfont.svg#NissanAGRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'NissanAGLight';
+    src: url('fonts/nissanag-light-webfont.eot');
+    src: url('fonts/nissanag-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nissanag-light-webfont.woff') format('woff'),
+         url('fonts/nissanag-light-webfont.ttf') format('truetype'),
+         url('fonts/nissanag-light-webfont.svg#NissanAGLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'NissanAGMedium';
+    src: url('fonts/nissanag-medium-webfont.eot');
+    src: url('fonts/nissanag-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nissanag-medium-webfont.woff') format('woff'),
+         url('fonts/nissanag-medium-webfont.ttf') format('truetype'),
+         url('fonts/nissanag-medium-webfont.svg#NissanAGMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'NissanAGMediumIta';
+    src: url('fonts/nissanag-mediumitalic-webfont.eot');
+    src: url('fonts/nissanag-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nissanag-mediumitalic-webfont.woff') format('woff'),
+         url('fonts/nissanag-mediumitalic-webfont.ttf') format('truetype'),
+         url('fonts/nissanag-medium-webfont.svg#NissanAGMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -1,0 +1,111 @@
+////////////////
+///CALENDAR SASS FILE
+////////////////
+@import "../global.scss";
+
+#drivers-nav {
+	border-bottom: 4px solid $underlineColour;
+}
+
+#drivers-list { 
+		h2 {
+			@include section-header($black);
+			margin-bottom: 0;
+			margin-top: 62px;
+		}
+
+		p {
+			@include copy($black);
+			margin-bottom: 37px;
+			padding-right: 40%;
+		}
+
+		> p {
+			margin-top: 11px;
+		}
+
+		.rookie-note {
+			width: 950px;
+			@include center;
+			@include copy;
+			padding: 0;
+			text-align: right;
+		}
+
+}
+
+.drivers-list-container {
+	border-top:  41px solid #f0f0f0;
+
+	> table {
+		margin-top: -41px;
+		width: 950px;
+		@include center;
+		@include copy;
+	}
+}
+
+.drivers-table {
+	border-collapse: collapse; 
+
+	th {
+		height: 35px;
+		text-align: center;
+
+		&:first-child {
+			text-align: left;
+		}
+	}
+
+	tr {
+		border-top: 1px solid #cccccc;
+
+		&:first-child {
+			border-top: 0;
+		}
+	}
+
+	td {
+		padding: 0;
+		height: 130px;
+		text-align: center;
+
+		&:first-child {
+			text-align: right;
+			width: 16.842105263%;
+  			padding-right: 20px;
+		}
+
+		> a {
+			text-transform: uppercase;
+			text-decoration: none;
+			color: #c61633;
+			font-size: 18px;
+			display: inline-block;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	.drivers-table-name {
+		text-align: left;
+	}
+}
+
+.dsocial-ico {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	background-image: url(../../img/pages/drivers/social-icons.png); 
+	background-repeat: no-repeat;
+
+	&.ico-twitter {
+		background-position: -35px 0;
+	}
+
+	&.ico-instagram {
+		background-position: -70px 0;
+	}
+}

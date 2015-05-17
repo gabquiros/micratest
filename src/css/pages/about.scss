@@ -1,0 +1,112 @@
+////////////////
+///CALENDAR SASS FILE
+////////////////
+@import "../global.scss";
+
+#about-nav {
+	border-bottom: 4px solid $underlineColour;
+}
+
+#main-content {
+	#about-series {
+		width: 950px;
+		@include center;
+
+		h2 {
+			@include section-header($black);
+			margin-top: 62px;
+			margin-bottom: 0;
+		}
+
+		p {
+			@include copy($black);
+			margin-top: 11px;
+		}
+
+		ul {
+			@include copy($black);
+			list-style: outside;
+			padding-left: 15px;
+		}
+	}
+
+	#about-sponsors {
+		width: 950px;
+		@include center;
+
+		h2, h3 {
+			@include section-header($black);
+			font-size: 30px;
+		}
+
+		h3 {
+			font-size: 24px !important;
+		}
+
+		p {
+			@include copy($black);
+		}
+
+		a {
+			display: inline-block;
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	#about-contact {
+		width: 950px;
+		@include center;
+
+		h2, h3 {
+			@include section-header($black);
+			font-size: 30px;
+		}
+
+		h3 {
+			font-size: 24px !important;
+		}
+
+		p {
+			@include copy($black);
+		}
+
+		> div {
+			overflow: hidden;
+			margin-bottom: 68px;
+		}
+
+		img {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 70px
+		}
+
+		address {
+			font-style: normal;
+			@include copy($black);
+
+			span {
+				display: block;
+
+				&.sub-title {
+					font-size: 18px;
+					margin-bottom: 6px;
+					margin-top: 20px;
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				a {
+					color: #c61633;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

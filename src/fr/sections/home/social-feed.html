@@ -1,0 +1,171 @@
+<div id="social-feed" class="social-media-wrapper component loading light" data-component-title="Social_Feed" data-component="{&quot;is&quot;: &quot;NNA.Components.StaticBanner&quot;,&quot;preload&quot;: {&quot;images&quot;: []}, &quot;options&quot;:{&quot;facebookOAuthClientId&quot;:3.16884741683725E14,&quot;isAnimated&quot;:false,&quot;facebookOAuthClientSecret&quot;:&quot;3cc1c10d65e1dd83c79ced0178faa011&quot;,&quot;facebookUsername&quot;:&quot;nissanversa&quot;}}">
+    <div class="centered-container">
+        <div class="component tabbed-section  tabbed-social-general" data-component="{ &quot;is&quot;: &quot;NNA.Components.TabbedSection&quot;, &quot;options&quot;: {} }">
+            <div class="centered-container">
+                <nav class="columns col-2">
+                    <div class="tabbed-section-tab tabbed-section-tab-0 selected ">
+                        <div data-mks-name="Facebook" class="social-tab-button facebook ">
+                            <img src="http://nissanca-validation.criticalmass.com/content/dam/nissan/socialhub/icons/facebook.png" alt="Facebook" /><span>Facebook</span>
+                        </div>
+                    </div>
+                    <div class="tabbed-section-tab tabbed-section-tab-1 selected">
+                        <div data-mks-name="twitter" class="social-tab-button twitter ">
+                            <img src="http://nissanca-validation.criticalmass.com/content/dam/nissan/socialhub/icons/twitter.png" alt="twitter"><span>twitter</span>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </nav>
+                <div class="tabbed-section-paginator">
+                    <!-- Facebook start -->
+                    <div class="tabbed-section-page tabbed-section-page-0 selected">
+                        <div class="tabbed-page-container">
+                            <div class="component social-tab social-tab-facebook" data-component='{ "is": "NNA.Components.SocialTabFacebook", "options": {"facebookAppID":1.2100849806284E14,"feedIdentifier":"NissanJukeNA"} }'>
+                                <div class="social-tab-top social-tab-facebook-top">
+                                    <div class="social-tab-feed social-tab-facebook-feed js-social-tab-feed-container js-social-tab-container">
+                                        <div class="loading-indicator">
+                                            <span></span>
+                                        </div>
+                                        <script class="js-social-tab-template" type="text/html">
+                                            <div class="page-container">
+                                                <div class="page">
+                                                    {{ /* FEATURED POST */ }} {{? it.featuredPost }}
+                                                    <div class="social-tab-tile-large social-tab-facebook-tile-large social-tab-tile-grey">
+                                                        <div class="social-tab-facebook-tile-top">
+                                                            {{? it.featuredPost.largePicture }}
+                                                            <a class="{{= it.featuredPost.type }} large-crop mks-link" data-service="facebook" data-article-id="{{=it.featuredPost.postID}}" data-postID="{{=it.featuredPost.postID}}" href="{{=it.featuredPost.postLink}}" target="_blank"><img src="{{= it.featuredPost.largePicture }}" /></a>{{?}}
+                                                        </div>
+                                                        <div class="social-tab-tile-bottom social-tab-facebook-tile-bottom">
+                                                            <span>{{=it.featuredPost.post}}</span>
+                                                            <ul>
+                                                                <li>
+                                                                    <a class="js-like mks-interaction" data-service="facebook" data-interact="like" data-postID="{{=it.featuredPost.postID}}" href="{{=it.featuredPost.postLink}}">Like</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="js-comment mks-interaction" data-service="facebook" data-interact="comment" data-postID="{{=it.featuredPost.postID}}" href="{{=it.featuredPost.postLink}}" target="_blank">&middot; Comment</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="js-share mks-interaction" data-service="facebook" data-interact="share" data-message="{{=it.featuredPost.rawPost}}" data-link="{{=it.featuredPost.link}}" data-picture="{{=it.featuredPost.picture}}" href="{{=it.featuredPost.postLink}}">&middot; Share</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    {{?}} {{ /* POST COLLECTION */ }} {{~ it.posts :fbPost:index }}
+                                                    <div class="social-tab-tile social-tab-facebook-tile social-tab-tile-grey">
+                                                        <div class="social-tab-tile-top social-tab-facebook-tile-top">
+                                                            {{? fbPost.picture }}
+                                                            <a class="{{= fbPost.type }} small-crop mks-link" data-service="facebook" data-article-id="{{=fbPost.postID}}" data-postID="{{=fbPost.postID}}" href="{{=fbPost.postLink}}" target="_blank">
+                                                                <img src="{{= fbPost.picture }}" />
+                                                            </a>
+                                                            {{?}}
+                                                            <span>{{=fbPost.post}}</span>
+                                                            <ul>
+                                                                <li>
+                                                                    <a class="js-like mks-interaction" data-service="facebook" data-interact="like" data-postID="{{=fbPost.postID}}" href="{{=fbPost.postLink}}">Like</a>
+                                                                </li>
+                                                                <li>
+                                                                    &middot; <a class="js-comment mks-interaction" data-service="facebook" data-interact="comment" data-postID="{{=fbPost.postID}}" href="{{=fbPost.postLink}}" target="_blank">Comment</a>
+                                                                </li>
+                                                                <li>
+                                                                    &middot; <a class="js-share mks-interaction" data-service="facebook" data-interact="share" data-message="{{=fbPost.rawPost}}" data-link="{{=fbPost.link}}" data-picture="{{=fbPost.picture}}" href="{{=fbPost.postLink}}">Share</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                    {{ /* BEGIN NEXT PAGE (@ 3 & 6n+3) UNTIL LAST */ }} {{? (index+4)%6===0 }}
+                                                </div>
+                                                {{?index!==it.posts.length-1}}
+                                                <div class="page">{{?}} {{?}} {{~}} {{ /* ERROR MESSAGE */ }} {{? !it.posts }}
+                                                    <div class="social-tab-error social-tab-facebook-error">
+                                                        <span>Keep up with the latest Nissan posts. Like us on Facebook.</span>
+                                                    </div>
+                                                    {{?}}
+                                                </div>
+                                            </div>
+                                        </script>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="social-tab-bottom social-tab-facebook-bottom">
+                                    <div class="social-tab-share social-tab-facebook-share">
+                                        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2FNissanJukeNA&amp;width&amp;layout=button&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80&amp;appId=121008498062840&amp;locale=en_US" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                        <span>
+                                  Like Juke on Facebook
+                                </span>
+                                    </div>
+                                    <div class="social-tab-paginator social-tab-facebook-paginator">
+                                        <a class="mks-see-all black-red-link" data-service="facebook" href="http://facebook.com/NissanJukeNA" target="_blank">See all posts</a>
+                                        <a href="#" class="social-tab-paginator-up social-tab-facebook-paginator-up disabled"></a>
+                                        <a href="#" class="social-tab-paginator-down social-tab-facebook-paginator-down disabled"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Facebook ends -->
+                    <!-- Twitter start -->
+                    <div class="tabbed-section-page tabbed-section-page-1 ">
+                        <div class="tabbed-page-container">
+                            <div class="component social-tab social-tab-twitter" data-component="{ &quot;is&quot;: &quot;NNA.Components.SocialTabTwitter&quot;, &quot;options&quot;: {&quot;feedIdentifier&quot;:&quot;NissanCanada&quot;} }">
+                                <div class="social-tab-top social-tab-twitter-top">
+                                    <div class="social-tab-feed social-tab-twitter-feed js-social-tab-feed-container js-social-tab-container">
+                                        <!-- <div class="loading-indicator">
+                              <span></span>
+                              </div> -->
+                                        <script class="js-social-tab-template" type="text/html">
+                                            <div class="page-container">
+                                                <div class="page">
+                                                    {{ /* POST COLLECTION */ }} {{~ it.posts :tweet:index }}
+                                                    <div class="social-tab-tile social-tab-twitter-tile social-tab-tile-grey">
+                                                        <div class="social-tab-tile-top social-tab-twitter-tile-top">
+                                                            <span>{{=tweet.post}}</span>
+                                                        </div>
+                                                        <div class="social-tab-tile-bottom social-tab-twitter-tile-bottom">
+                                                            <ul class="twitter-icon">
+                                                                <li>
+                                                                    <a class="js-reply twitter-reply mks-interaction" data-service="twitter" data-interact="reply" data-postID="{{=tweet.postID}}" href="https://twitter.com/intent/tweet?in_reply_to={{=tweet.postID}}">Reply</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="js-retweet twitter-retweet mks-interaction" data-service="twitter" data-interact="retweet" data-postID="{{=tweet.postID}}" href="https://twitter.com/intent/retweet?tweet_id={{=tweet.postID}}">Retweet</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="js-favorite twitter-favorite mks-interaction" data-service="twitter" data-interact="favorite" data-postID="{{=tweet.postID}}" href="https://twitter.com/intent/favorite?tweet_id={{=tweet.postID}}">Favorite</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    {{ /* BEGIN NEXT PAGE UNTIL LAST */ }} {{? (index+1)%6===0 }}
+                                                </div>
+                                                {{?index!==it.posts.length-1}}
+                                                <div class="page">{{?}} {{?}} {{~}} {{ /* ERROR MESSAGE */ }} {{? !it.posts }}
+                                                    <div class="social-tab-error social-tab-twitter-error">
+                                                        <span>Keep up with the latest Nissan posts. Follow us on Twitter.</span>
+                                                    </div>
+                                                    {{?}}
+                                                </div>
+                                            </div>
+                                        </script>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="social-tab-bottom social-tab-twitter-bottom">
+                                    <div class="social-tab-share social-tab-twitter-share">
+                                        <a href="https://twitter.com/NissanCanada" class="twitter-follow-button" data-show-count="false" data-width="60px" data-show-screen-name="false">Follow @NissanCanada</a>
+                                        <span>Follow Nissan on Twitter</span>
+                                    </div>
+                                    <div class="social-tab-paginator social-tab-twitter-paginator">
+                                        <a class="mks-see-all black-red-link" data-service="twitter" href="https://twitter.com/NissanCanada" target="_blank">See all posts</a>
+                                        <a href="#" class="social-tab-paginator-up social-tab-twitter-paginator-up disabled"></a>
+                                        <a href="#" class="social-tab-paginator-down social-tab-paginator-down disabled"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Twitter ends -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="loading-indicator"><span></span></div> -->
+</div>
